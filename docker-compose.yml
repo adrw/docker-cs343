@@ -1,0 +1,10 @@
+# By Andrew Paradi | Source at https://github.com/andrewparadi/docker-cs343
+
+version: '2'
+services:
+
+  cs343:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: andrewparadi/cs343
