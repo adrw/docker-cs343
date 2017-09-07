@@ -11,9 +11,9 @@ RUN apt-get update && \
 
 # step 1: downloads source uC++
 WORKDIR /root/uCPP
-RUN bash -c "wget http://plg.uwaterloo.ca/~usystem/pub/uSystem/u++-7.0.0.sh" && \
+RUN bash -c "wget --no-check-certificate http://plg.uwaterloo.ca/~usystem/pub/uSystem/u++-7.0.0.sh" && \
       apt-get remove wget --yes
 
 # step 2: setup Automatic uC++ Build
 WORKDIR /root/uCPP
-RUN bash -c "sh u++-7.0.0.sh"
+RUN sh u++-7.0.0.sh
